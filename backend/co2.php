@@ -36,6 +36,9 @@ if(isset($_POST["conunt_autos"])){
 $respuesta["electricidad"]=random_int(0,500000);
 $respuesta["personal"]=random_int(0,500000);
 $respuesta["autos"]=random_int(0,500000);
+$respuesta["barcos"]=random_int(0,500000);
+$respuesta["aviones"]=random_int(0,500000);
+$respuesta["comedor"]=random_int(0,500000);
 
 
 $respuesta["total"]=$respuesta["electricidad"]+$respuesta["persosnal"]+$respuesta["autos"]+$respuesta["barcos"]+$respuesta["aviones"]+$respuesta["comedor"];
