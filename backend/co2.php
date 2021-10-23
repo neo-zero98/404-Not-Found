@@ -26,13 +26,33 @@ if(isset($_POST["pago"])){
 if(isset($_POST["count_personas"])){
 	$cantidadPersonas=$_POST["count_personas"];
 }
-if(isset($_POST["conunt_autos"])){
+if(isset($_POST["count_autos"])){
 	$cantidadAutos=$_POST["conunt_autos"];
 }
+
+if(isset($_POST["count_aviones"])){
+	$cantidadAviones=$_POST["count_aviones"];
+}
+
+if(isset($_POST["count_barcos"])){
+	$cantidadBarcos=$_POST["count_barcos"];
+}
+if(isset($_POST["count_comedores"])){
+	$cantidadComedores=$_POST["count_comedores"];
+}
+
+if(isset($_POST["ubicacion"])){
+	$tarifaElectricidad=$listado[$_POST["ubicacion"]];
+}
+
 
 // $respuesta["electricidad"]=($pagoElectricidad/$tarifaElectricidad)*$factorElectricidad;
 // $respuesta["personal"]=$cantidadPersonas*$factorPersonas;
 // $respuesta["autos"]=$cantidadAutos*$factorAutos;
+// $respuesta["barcos"]=$cantidadBarcos*$factorBarcos;
+// $respuesta["aviones"]=$cantidadAviones*$factorAviones;
+// $respuesta["comedor"]=$cantidadComedores*$factorComedores;
+
 $respuesta["electricidad"]=random_int(0,500000);
 $respuesta["personal"]=random_int(0,500000);
 $respuesta["autos"]=random_int(0,500000);
