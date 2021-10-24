@@ -12,6 +12,7 @@ export class ApiCarbonoService {
 
   obtenerHuella(huella: Huella) {
     const objeto = {
+      nombreEmpresa: huella.nombreEmpresa,
       countPersonas: huella.countPersonas,
       countAutos: huella.countAutos,
       countAviones: huella.countAviones,

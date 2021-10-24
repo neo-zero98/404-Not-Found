@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -25,10 +25,57 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-*{
-  // font-family: ;
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600&display=swap");
+
+:root{
+  --ion-font-family: "Catamaran", sans-serif;
 }
-.button-green{
+ion-content {
+  --background: linear-gradient(79.87deg, #028484 0%, #88ca9a 99.17%);
+}
+
+
+.linear-gradient {
+  background: linear-gradient(79.87deg, #028484 0%, #88ca9a 99.17%);
+}
+
+/*colors*/
+.btn-green {
   --background: #028484;
 }
 
+.btn-green-claro{
+  --background: #5AC4C4;
+  ;
+}
+
+.yellow-text{
+  color: #F8CD51;
+}
+
+.transparent-input{
+  --background: transparent;
+  --color: #D9EFE0;
+}
+
+.text-input-color{
+  --color: #D9EFE0;
+}
+
+/*size text*/
+.text-chico{
+  font-size: 1.4rem;
+}
+.text-mediano{
+  font-size: 1.9rem;
+}
+
+.text-grande{
+  font-size: 3rem;
+}
+
+/*size buttons*/
+.btn-exapand{
+  margin: 0 10% 0 10%;
+}

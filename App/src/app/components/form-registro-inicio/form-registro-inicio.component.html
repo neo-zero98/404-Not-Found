@@ -1,0 +1,332 @@
+<form [formGroup]="form">
+  <ion-grid class="caja" fixed *ngIf="btnOpcion === 1">
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center yellow-text text-mediano fuente">
+          Cambiemos al mundo
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center juntos text-grande fuente">¡Juntos!</div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="caja3">
+      <ion-col>
+        <div class="ion-text-center btn-exapand">
+          <ion-button (click)="siguiente(2)" class="btn-green" expand="block"
+            >Mide tu huella de carbono</ion-button
+          >
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="caja" fixed *ngIf="btnOpcion === 2">
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center text-mediano fuente">
+          Mide las emisiones de <span class="yellow-text">CO2</span> de tu
+          empresa
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-20">
+      <ion-col>
+        <div class="ion-text-center btn-exapand">
+          <ion-button (click)="siguiente(3)" class="btn-green" expand="block"
+            >Somos Clientes BBVA</ion-button
+          >
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center btn-exapand">
+          <ion-button
+            (click)="siguiente(4)"
+            class="btn-green-claro"
+            expand="block"
+            >No somos clientes</ion-button
+          >
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="caja" fixed *ngIf="btnOpcion === 3 || btnOpcion === 4">
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center text-mediano fuente">
+          Mide las emisiones de <span class="yellow-text">CO2</span> de tu
+          empresa
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-10">
+      <ion-col>
+        <ion-item class="transparent-input btn-exapand">
+          <ion-label position="floating" color="ligth"
+            >Nombre de la empresa</ion-label
+          >
+          <ion-input
+            formControlName="nombre"
+            class="text-input-color"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-10">
+      <ion-col>
+        <div class="ion-text-center btn-exapand">
+          <div *ngIf="btnOpcion === 4">
+            <ion-button (click)="siguiente(5)" class="btn-green" expand="block"
+              >Comenzar</ion-button
+            >
+          </div>
+          <div *ngIf="btnOpcion === 3">
+            <ion-button (click)="siguiente(6)" class="btn-green" expand="block"
+              >Comenzar</ion-button
+            >
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-5">
+      <ion-col>
+        <div (click)="anterior(2)" class="ion-text-center">Regresar</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="caja" fixed *ngIf="btnOpcion === 5">
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center text-mediano fuente">
+          ¿Cuando gastas en <span class="yellow-text">Electricidad</span> al
+          año?
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-10">
+      <ion-col>
+        <ion-item class="transparent-input btn-exapand">
+          <ion-label position="floating" color="ligth"
+            >Gasto de electricidad anual</ion-label
+          >
+          <ion-input
+            formControlName="electricidad"
+            type="number"
+            class="text-input-color"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-10">
+      <ion-col>
+        <div class="ion-text-center btn-exapand">
+          <ion-button (click)="siguiente(6)" class="btn-green" expand="block"
+            >Comenzar</ion-button
+          >
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-5">
+      <ion-col>
+        <div (click)="anterior(3)" class="ion-text-center">Regresar</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="caja" fixed *ngIf="btnOpcion === 6">
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center text-mediano fuente">
+          ¿Cuantos <span class="yellow-text">colaboradores</span> tiene tu
+          empresa?
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-10">
+      <ion-col>
+        <ion-item class="transparent-input btn-exapand">
+          <ion-label position="floating" color="ligth"
+            >Número de colaboradores</ion-label
+          >
+          <ion-input
+            formControlName="colaboradores"
+            type="number"
+            class="text-input-color"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-10">
+      <ion-col>
+        <div class="ion-text-center btn-exapand">
+          <ion-button (click)="siguiente(7)" class="btn-green" expand="block"
+            >Siguiente</ion-button
+          >
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-5">
+      <ion-col>
+        <div (click)="anterior(3)" class="ion-text-center">Regresar</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="caja" fixed *ngIf="btnOpcion === 7">
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center text-mediano fuente">
+          ¿En qué <span class="yellow-text">estados</span> opera tu empresa?
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-10">
+      <ion-col>
+        <ion-item class="transparent-input btn-exapand">
+          <ion-label>Seleccionar estados</ion-label>
+          <ion-select
+            formControlName="estados"
+            multiple="true"
+            cancelText="Cerrar"
+            okText="Aceptar"
+          >
+            <ion-select-option
+              *ngFor="let estado of listEstados"
+              [value]="estado.id"
+              >{{ estado.val }}</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-10">
+      <ion-col>
+        <div class="ion-text-center btn-exapand">
+          <ion-button
+            (click)="siguiente(8)"
+            [disabled]="form.controls.estados.invalid && form.invalid"
+            class="btn-green"
+            expand="block"
+            >Siguiente</ion-button
+          >
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-5">
+      <ion-col>
+        <div (click)="anterior(6)" class="ion-text-center">Regresar</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="caja" fixed *ngIf="btnOpcion === 8">
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center text-mediano fuente">
+          ¿Tu empresa ofrece
+          <span class="yellow-text">comedor o cafetería?</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-10">
+      <ion-col class="check-box">
+        <ion-item class="transparent-input btn-exapand" lines="none">
+          <ion-checkbox
+            formControlName="cafeteria"
+            color="medium"
+            mode="ios"
+            value="true"
+            >Si
+          </ion-checkbox>
+          <ion-label>Si</ion-label>
+        </ion-item>
+        <ion-item class="transparent-input btn-exapand" lines="none">
+          <ion-checkbox
+            formControlName="cafeteria"
+            color="medium"
+            mode="ios"
+            value="false"
+            >No</ion-checkbox
+          >
+          <ion-label>No</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-10">
+      <ion-col>
+        <div class="ion-text-center btn-exapand">
+          <ion-button (click)="siguiente(9)" class="btn-green" expand="block"
+            >Siguiente</ion-button
+          >
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-5">
+      <ion-col>
+        <div (click)="anterior(7)" class="ion-text-center">Regresar</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="caja" fixed *ngIf="btnOpcion === 9">
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center text-mediano fuente">
+          Platicanos de sus medios de transporte
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center text-mediano fuente">
+          <span class="yellow-text text-chico">¿Cuentan con aviones?</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="">
+      <ion-col class="check-box">
+        <ion-item class="transparent-input btn-exapand" lines="none">
+          <ion-checkbox formControlName="aviones" color="medium" mode="ios"
+            >Si</ion-checkbox
+          >
+          <ion-label>No</ion-label>
+        </ion-item>
+        <ion-item class="transparent-input btn-exapand" lines="none">
+          <ion-checkbox formControlName="aviones" color="medium" mode="ios"
+            >No</ion-checkbox
+          >
+          <ion-label>Si</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item class="transparent-input btn-exapand">
+          <ion-label position="floating" color="ligth">¿Cuantos?</ion-label>
+          <ion-input
+            formControlName="cantidadAviones"
+            class="text-input-color"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center btn-exapand">
+          <ion-button [disabled]="form.controls.cantidadAvionesinvalid && form.invalid" (click)="siguiente(10)" class="btn-green" expand="block"
+            >Siguiente</ion-button
+          >
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="mt-5">
+      <ion-col>
+        <div (click)="anterior(8)" class="ion-text-center">Regresar</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</form>
