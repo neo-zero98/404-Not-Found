@@ -6,4 +6,52 @@
 
 <ion-content [fullscreen]="true">
 
+  <ion-grid fixed>
+    <ion-row class="ion-text-center">
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-avatar style="height: 110px;width: 110px;">
+          <img src="https://www.imat.org.mx/images/people/user-login.png">
+        </ion-avatar>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input autofocus="true"  type="email" required="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input  type="password" required="true"></ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button color="success" expand="block" shape="round">Aceptar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <a href="/login/registro">Registrarse</a>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-avatar style="height: 65px;width: 65px;">
+          <img src=" ">
+        </ion-avatar>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  
+  </ion-grid>
+
 </ion-content>
