@@ -10,7 +10,6 @@ $_POST = json_decode(file_get_contents('php://input'), true);
 $archivo=fopen("ubicaciones.json","r");
 $listado=json_decode(fread($archivo,filesize("ubicaciones.json")),true);
 
-$ubicacion="";
 $tarifaElectricidad=1;
 
 $factorElectricidad=0.494;
@@ -46,22 +45,22 @@ if(isset($_POST["ubicacion"])){
 }
 
 
-// $respuesta["electricidad"]=($pagoElectricidad/$tarifaElectricidad)*$factorElectricidad;
-// $respuesta["personal"]=$cantidadPersonas*$factorPersonas;
-// $respuesta["autos"]=$cantidadAutos*$factorAutos;
-// $respuesta["barcos"]=$cantidadBarcos*$factorBarcos;
-// $respuesta["aviones"]=$cantidadAviones*$factorAviones;
-// $respuesta["comedor"]=$cantidadComedores*$factorComedores;
+$respuesta["electricidad"]=($pagoElectricidad/$tarifaElectricidad)*$factorElectricidad;
+$respuesta["personal"]=$cantidadPersonas*$factorPersonas;
+$respuesta["autos"]=$cantidadAutos*$factorAutos;
+$respuesta["barcos"]=$cantidadBarcos*$factorBarcos;
+$respuesta["aviones"]=$cantidadAviones*$factorAviones;
+$respuesta["comedor"]=$cantidadComedores*$factorComedores;
 
-$respuesta["electricidad"]=random_int(0,500000);
-$respuesta["personal"]=random_int(0,500000);
-$respuesta["autos"]=random_int(0,500000);
-$respuesta["barcos"]=random_int(0,500000);
-$respuesta["aviones"]=random_int(0,500000);
-$respuesta["comedor"]=random_int(0,500000);
+// $respuesta["electricidad"]=random_int(0,500000);
+// $respuesta["personal"]=random_int(0,500000);
+// $respuesta["autos"]=random_int(0,500000);
+// $respuesta["barcos"]=random_int(0,500000);
+// $respuesta["aviones"]=random_int(0,500000);
+// $respuesta["comedor"]=random_int(0,500000);
 
 
-$respuesta["total"]=$respuesta["electricidad"]+$respuesta["persosnal"]+$respuesta["autos"]+$respuesta["barcos"]+$respuesta["aviones"]+$respuesta["comedor"];
+$respuesta["total"]=$respuesta["electricidad"]+$respuesta["personal"]+$respuesta["autos"]+$respuesta["barcos"]+$respuesta["aviones"]+$respuesta["comedor"];
 
 echo(json_encode($respuesta));
 ?>
