@@ -30,22 +30,22 @@ $factorComedor=450000;
 if(isset($_POST["pago"])){
 	$pagoElectricidad=$_POST["pago"];
 }
-if(isset($_POST["count_personas"])){
-	$cantidadPersonas=$_POST["count_personas"];
+if(isset($_POST["countPersonas"])){
+	$cantidadPersonas=$_POST["countPersonas"];
 }
-if(isset($_POST["count_autos"])){
-	$cantidadAutos=$_POST["conunt_autos"];
-}
-
-if(isset($_POST["count_aviones"])){
-	$cantidadAviones=$_POST["count_aviones"];
+if(isset($_POST["countAutos"])){
+	$cantidadAutos=$_POST["conuntAutos"];
 }
 
-if(isset($_POST["count_barcos"])){
-	$cantidadBarcos=$_POST["count_barcos"];
+if(isset($_POST["countAviones"])){
+	$cantidadAviones=$_POST["countAviones"];
+}
+
+if(isset($_POST["countBarcos"])){
+	$cantidadBarcos=$_POST["countBarcos"];
 }
 if(isset($_POST["count_comedores"])){
-	$cantidadComedores=$_POST["count_comedores"];
+	$cantidadComedores=$_POST["countComedores"];
 }
 
 if(isset($_POST["ubicacion"])){
